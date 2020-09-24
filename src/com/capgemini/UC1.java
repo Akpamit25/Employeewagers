@@ -2,14 +2,21 @@ package com.capgemini;
 
 public class UC1 {
 
-	public final strictfp static void main(String[] args){
-		System.out.println("Welcome to Employee Wage Computation Program.");
+	public static final int isFullTime=1;
+	public static final int wagePerHour=20;
 
-		int check=1;
-		double ec=Math.floor(Math.random() * 10)%2;
+	public static void main(String[] args){
 
-		if(ec==check) System.out.println("Employee is Present");
+		int empHours=0;
+		int empWage=0;
+		
+		int empCheck=(int)Math.floor(Math.random()*10)%2;
+		if (empCheck==isFullTime)
+			empHours=8;
 		else
-			System.out.println("Employee is Absent");
-		}
+			empHours=0;
+		empWage=empHours*wagePerHour;
+		System.out.println("Employee Wage : "+empWage);
 	}
+	}
+
